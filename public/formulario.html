@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <center>
+        <h1>*****formulario*****</h1>
+        <form action="/enviar" method="post">
+
+            <!-- TYPE="hidden": valor oculto que se envía al servidor -->
+            <input type="hidden" name="formulario" value="my little pony">
+
+            <!-- TEXT con SIZE, MAXLENGTH y VALUE -->
+            <h3>ingresa tu nombre</h3>
+            <input type="text" name="nombre" size="40" maxlength="40" value="">
+
+            <!-- PASSWORD -->
+            <h3>crea una contraseña (se mostrará con estrellitas)</h3>
+            <input type="password" name="clave" size="20" maxlength="10">
+
+            <h3>ingresa la edad en la que viste my little pony</h3>
+            <input type="text" name="edad" size="10" maxlength="3">
+
+            <!-- TEXTAREA con ROWS y COLS -->
+            <h3>Introduce la opinión sobre la serie y peliculas:</h3>
+            <textarea name="comentario" rows="8" cols="60"></textarea><br>
+
+            <!-- SELECT con SELECTED -->
+            <h3>que tanto sabes</h3>
+            <select name="saber">
+                <option value="experto">soy un experto</option>
+                <option value="nada">no se nada</option>
+                <option value="intermedio" selected>intermedio</option>
+                <option value="poco">poco</option>
+            </select>
+
+            <!-- SELECT con SIZE y MULTIPLE -->
+            <h3>elige tus personajes favoritos (puedes elegir varios)</h3>
+            <p class="ayuda">Para elegir varios mantén presionada la tecla <b>Ctrl</b> (o <b>Cmd</b> en Mac) mientras das clic en cada uno. En celular, toca cada opción.</p>
+            <select name="favoritos" size="6" multiple>
+                <option value="pinkie pie">pinkie pie</option>
+                <option value="fluttershy">fluttershy</option>
+                <option value="twilight sparkle">twilight sparkle</option>
+                <option value="applejack">applejack</option>
+                <option value="rainbow dash">rainbow dash</option>
+                <option value="rarity">rarity</option>
+            </select>
+
+            <!-- RADIO: mismo NAME, VALUE y CHECKED -->
+            <h3>1.cual es el elemento de la armonia que representa twilight sparkle?</h3>
+            <input name="respuesta1" type="radio" value="honestidad">honestidad
+            <input name="respuesta1" type="radio" value="amabilidad">amabilidad
+            <input name="respuesta1" type="radio" value="magia" checked>magia
+            <input name="respuesta1" type="radio" value="risa">risa
+
+            <h3>2.como se llama el dragon que tiene twilight sparkle?</h3>
+            <input name="respuesta2" type="radio" value="smolder">smolder
+            <input name="respuesta2" type="radio" value="spike">spike
+            <input name="respuesta2" type="radio" value="garbie">garbie
+            <input name="respuesta2" type="radio" value="ember">ember
+
+            <h3>3.como se llama el club formado por apple bloom, sweetie belle y scootaloo?</h3>
+            <input name="respuesta3" type="radio" value="las cutie mark crusaders">las cutie mark crusaders
+            <input name="respuesta3" type="radio" value="las burras aventureras">las burras aventureras
+            <input name="respuesta3" type="radio" value="el trio magico">el trio magico
+            <input name="respuesta3" type="radio" value="las jovenes talentosas">las jovenes talentosas
+
+            <h3>4.como hace sus promesas pinkie pie:</h3>
+            <textarea name="respuesta4" rows="8" cols="60"></textarea><br>
+
+            <h3>5.cual es el saludo de twilight sparkle con cadence?</h3>
+            <textarea name="respuesta5" rows="8" cols="60"></textarea><br>
+
+            <h3>6.cuantas hermanas tiene pinkie pie?</h3>
+            <input name="respuesta6" type="radio" value="1">1
+            <input name="respuesta6" type="radio" value="3">3
+            <input name="respuesta6" type="radio" value="5">5
+            <input name="respuesta6" type="radio" value="2">2
+
+            <h3>7.cuantos elementos de la armonia hay?</h3>
+            <input name="respuesta7" type="radio" value="4">4
+            <input name="respuesta7" type="radio" value="10">10
+            <input name="respuesta7" type="radio" value="5">5
+            <input name="respuesta7" type="radio" value="6">6
+
+            <h3>8.cual es la cutie mark de fluttershy?</h3>
+            <input name="respuesta8" type="radio" value="3 mariposas">3 mariposas
+            <input name="respuesta8" type="radio" value="un rayo">un rayo
+            <input name="respuesta8" type="radio" value="una estrella">una estrella
+            <input name="respuesta8" type="radio" value="muchos animales">muchos animales
+
+            <h3>9.consideras que la serie es buena?</h3>
+            <input name="respuesta9" type="radio" value="si es muy buena" checked>si, es muy buena
+            <input name="respuesta9" type="radio" value="podria mejorar">podria mejorar<br>
+
+            <h3>10.que pony te gustaria ser?</h3>
+            <select name="pony">
+                <option>pinkie pie</option>
+                <option>fluttershy</option>
+                <option>twilight sparkle</option>
+                <option>applejack</option>
+                <option>rainbow dash</option>
+                <option>rarity</option>
+                <option>otro</option>
+            </select>
+
+            <h3>11. en caso de que sea otro pony, cual serias?</h3>
+            <input type="text" name="otro_pony" size="40" maxlength="30">
+
+            <h3>12.que objeto magico guardaba twilight sparkle al inicio de la serie que utilizaba<br>
+                para escribirle cartas a la princesa celestia?</h3>
+            <input name="respuesta12" type="radio" value="un pergamino y una pluma magica">un pergamino y una pluma magica
+            <input name="respuesta12" type="radio" value="un espejo magico">un espejo magico
+            <input name="respuesta12" type="radio" value="un libro encantado">un libro encantado
+            <input name="respuesta12" type="radio" value="una bola de cristal">una bola de cristal
+
+            <h3>13.que ciudad magica hecha completamente de cristal esta gobernada<br>
+                por la princesa cadance y shining armor?</h3>
+            <input name="respuesta13" type="radio" value="canterlot">canterlot
+            <input name="respuesta13" type="radio" value="el imperio de cristal">el imperio de cristal
+            <input name="respuesta13" type="radio" value="las ventaduras">las ventaduras
+            <input name="respuesta13" type="radio" value="el valle de la niebla">el valle de la niebla
+
+            <h3>14.que animal es gummy, la mascota de pinkie pie?</h3>
+            <input name="respuesta14" type="radio" value="un patito">un patito
+            <input name="respuesta14" type="radio" value="un caiman sin dientes">un caiman sin dientes
+            <input name="respuesta14" type="radio" value="un conejo">un conejo
+            <input name="respuesta14" type="radio" value="una tortuga">una tortuga
+
+            <h3>15.si fueras un pony, te gustaria visitar canterlot?</h3>
+            <select name="visita">
+                <option>si</option>
+                <option>no</option>
+                <option>esta muy aburrido</option>
+                <option>tal vez</option>
+            </select>
+
+            <!-- CHECKBOX -->
+            <h3>16.cuales de estos ponis son alicornios?</h3>
+            <input type="checkbox" name="alicornio_twilight">twilight sparkle
+            <input type="checkbox" name="alicornio_celestia">celestia
+            <input type="checkbox" name="alicornio_luna">luna
+            <input type="checkbox" name="alicornio_cadance">cadance
+            <input type="checkbox" name="alicornio_rarity">rarity<br>
+
+            <h3>17.quien trae el dia?</h3>
+            <input type="checkbox" name="celestia">celestia
+            <input type="checkbox" name="luna">luna
+            <input type="checkbox" name="twilight">twilight sparkle
+            <input type="checkbox" name="cadance">cadance<br>
+
+            <h3>18.que tipo de criatura magica es la princesa cadance?</h3>
+            <input name="respuesta18" type="radio" value="unicornio">unicornio
+            <input name="respuesta18" type="radio" value="alicornio">alicornio
+            <input name="respuesta18" type="radio" value="pegaso">pegaso
+            <input name="respuesta18" type="radio" value="poni terrestre">poni terrestre
+
+            <h3>19.quien es la representacion del caos?</h3>
+            <input name="respuesta19" type="radio" value="nightmare moon">nightmare moon
+            <input name="respuesta19" type="radio" value="reina chrysalis">reina chrysalis
+            <input name="respuesta19" type="radio" value="discord">discord
+            <input name="respuesta19" type="radio" value="lord tirek">lord tirek
+
+            <h3>20.te gusto la parte donde twilight sparkle se convierte en princesa? por que?</h3>
+            <textarea name="respuesta20" rows="8" cols="60"></textarea><br>
+
+            <!-- CHECKBOX con CHECKED (activado desde el inicio) -->
+            <h3>confirmación</h3>
+            <input type="checkbox" name="acepto" checked>acepto enviar mis respuestas<br><br>
+
+            <!-- BOTONES: SUBMIT y RESET -->
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+            <br><br>
+
+            <!-- TYPE="image": imagen sensible al ratón (también envía el formulario) -->
+            <input type="image" name="imagen" src="pony.png" width="300" alt="pony">
+        </form>
+    </center>
+</body>
+</html>
